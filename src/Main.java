@@ -1,15 +1,15 @@
-void quicksort(int[] array){
+void quickSort(int[] array){
     if (array != null && array.length >= 2){
-        quicksort(array, 0, array.length-1);
+        quickSort(array, 0, array.length-1);
     }
 }
-void quicksort(int[] array, int low, int high){
+void quickSort(int[] array, int low, int high){
     if (low >= high) {
         return;
     }
     int pivotIndex = partition(array, low, high);
-    quicksort(array, low, pivotIndex - 1);
-    quicksort(array, pivotIndex+1, high);
+    quickSort(array, low, pivotIndex - 1);
+    quickSort(array, pivotIndex+1, high);
     }
 
 
@@ -64,6 +64,6 @@ void main() {
     //8>5
     //[2, 3, 4, 5, 9, 8, 7]
     int[] numbers = {7, 2, 9, 4, 3, 8, 5};
-    quicksort(numbers);
+    quickSort(numbers);
     System.out.println(Arrays.toString(numbers));
 }
